@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组声明式系列方法</title>
+    <script src="../../src/array/declares.js"></script>
+</head>
+<body>
+<script>
+    // 声明一个数组
+    const arr =  [1,2,3,4,2077,5,1024];
+
+    // map()
+    console.log("原数组为：" + arr)
+
+    let result = map(arr, (item, index) => {
+        // console.log(index);
+        return item * 10;
+    });
+    console.log("map()函数结果：" + result);
+
+    // reduce()
+    result = arr.reduce(function(res, value){
+        return res + value;
+    }, 0);
+
+    console.log("reduce()函数结果："+result);
+
+
+    //filter
+    // result = arr.filter(item => item % 2===1);
+    result = filter(arr, item => item % 2===0);
+    console.log("filter()函数结果"+result);
+
+    //find
+    result = find(arr, (item, index) => {
+        return item > 4;
+    });
+
+    console.log("find()函数结果"+result);
+
+    //findIndex
+    result = findIndex(arr, (item, index) => {
+        return item > 20;
+    });
+    console.log("findIndex()函数结果"+result);
+
+
+
+    //every
+    result = every(arr, (item, index) => {
+        return item > 20;
+    });
+
+    console.log("every()函数结果"+result);
+
+    // some
+    result = some(arr, (item, index) => {
+        return item > 20;
+    });
+    console.log("some()函数结果"+result);
+
+</script>
+</body>
+</html>
