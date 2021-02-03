@@ -1,5 +1,11 @@
-
-export const eventBus = {
+/**
+ * 事件总线
+ eventBus: 包含所有功能的事件总线对象
+ eventBus.on(eventName, listener): 绑定事件监听
+ eventBus.emit(eventName, data): 分发事件
+ eventBus.off(eventName): 解绑指定事件名的事件监听, 如果没有指定解绑所有
+ */
+const eventBus = {
     //保存类型与回调的容器
     callbacks: {}
 };

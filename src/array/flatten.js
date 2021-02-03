@@ -1,5 +1,8 @@
 /**
  * 数组扁平化
+ * 取出嵌套数组(多维)中的所有元素放到一个新数组(一维)中
+ * 如: [1, [3, [2, 4]]] ==> [1, 3, 2, 4]
+ * 方法一：forEach 递归遍历
  * @param {Array} arr 
  */
 function flatten1(arr){
@@ -19,7 +22,7 @@ function flatten1(arr){
 }
 
 /**
- * 
+ * 方法二：
  * @param {Array} arr 
  */
 function flatten2(arr){
@@ -27,10 +30,7 @@ function flatten2(arr){
     let result = [...arr];
     //循环判断
     while(result.some(item => Array.isArray(item))){
-        // [1,2,[3,4,[5,6]],7]
-        // result = [].concat(1,2,[3,4,[5,6]],7);// [1,2,3,4,[5,6],7]
-        // result = [].concat(1,2,3,4,[5,6],7);// [1,2,3,4,5,6,7]
-        result = [].concat(...result);//
+        result = [].concat(...result);
     }
     //返回结果
     return result;

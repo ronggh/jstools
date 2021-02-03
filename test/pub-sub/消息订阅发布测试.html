@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>消息订阅与发布</title>
-    <script src="../../src/pub-sub/index.js"></script>
+    <script src="../../src/pub-sub/pub-sub.js"></script>
 </head>
 <body>
     <script>
@@ -22,24 +22,18 @@
         });
 
         //输出唯一的id
-        // console.log(pid, pid2);
+        console.log(pid, pid2);
         //发布消息
-        // PubSub.publish('pay', {
-        //     title: '鱼香肉丝盖饭',
-        //     price: 20,
-        //     pos: '三年二班'
-        // });
-
-        //取消订阅
-        // PubSub.unsubscribe('pay');
-        PubSub.unsubscribe('token_2');
-
-
         PubSub.publish('pay', {
             title: '鱼香肉丝盖饭',
             price: 20,
             pos: '三年二班'
         });
+
+        //取消订阅
+        // PubSub.unsubscribe('pay');
+        // PubSub.unsubscribe('token_2');
+
 
     </script>
 </body>

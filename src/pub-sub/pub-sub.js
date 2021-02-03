@@ -1,5 +1,11 @@
-
-export const PubSub = {
+/**
+ PubSub: 包含所有功能的订阅/发布消息的管理者
+ PubSub.subscribe(msg, subscriber): 订阅消息: 指定消息名和订阅者回调函数
+ PubSub.publish(msg, data): 异步发布消息: 指定消息名和数据
+ PubSub.publishSync(msg, data): 同步发布消息: 指定消息名和数据
+ PubSub.unsubscribe(flag): 取消订阅: 根据标识取消某个或某些消息的订阅
+ */
+const PubSub = {
     //订阅唯一id
     id:1,
     //频道与回调保存容器

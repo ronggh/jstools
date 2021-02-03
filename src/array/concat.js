@@ -18,4 +18,5 @@ function concat(arr, ...args){
     //返回 result
     return result;
 }
+export {concat}
 

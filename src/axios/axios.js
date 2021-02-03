@@ -1,5 +1,21 @@
+/**
+ * 语法：
+ axios(options)
+ 参数配置对象：url, method, params与data
+ 返回值为：promise对象
+ axios.get(url, options)
+ axios.post(url, data, options)
+ axios.put(url, data, options)
+ axios.delete(url, options)
+ 功能：使用xhr发送ajax请求的工具函数，与axios库功能类似
 
-export function axios({method, url, params, data}){
+ * @param method 可为POST,GET,PUT,DELETE
+ * @param url
+ * @param params
+ * @param data
+ * @returns {Promise<any>}
+ */
+function axios({method, url, params, data}){
     //方法转化大写
     method = method.toUpperCase();
     //返回值
@@ -47,6 +63,12 @@ export function axios({method, url, params, data}){
     });
 }
 
+/**
+ * GET请求
+ * @param url
+ * @param options
+ * @returns {Promise<any>}
+ */
 axios.get = function(url, options){
     //发送 AJAX 请求 GET
     let config = Object.assign(options, {method:'GET', url: url});
@@ -54,6 +76,12 @@ axios.get = function(url, options){
     return axios(config);
 }
 
+/**
+ * POST请求
+ * @param url
+ * @param options
+ * @returns {Promise<any>}
+ */
 axios.post = function(url, options){
     //发送 AJAX 请求 GET
     let config = Object.assign(options, {method:'POST', url: url});
@@ -61,6 +89,13 @@ axios.post = function(url, options){
     return axios(config);
 }
 
+/**
+ * PUT 请求
+
+ * @param url
+ * @param options
+ * @returns {Promise<any>}
+ */
 axios.put = function(url, options){
     //发送 AJAX 请求 GET
     let config = Object.assign(options, {method:'PUT', url: url});
@@ -68,6 +103,12 @@ axios.put = function(url, options){
     return axios(config);
 }
 
+/**
+ * DELETE请求
+ * @param url
+ * @param options
+ * @returns {Promise<any>}
+ */
 axios.delete = function(url, options){
     //发送 AJAX 请求 GET
     let config = Object.assign(options, {method:'delete', url: url});

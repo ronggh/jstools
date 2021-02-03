@@ -11,15 +11,17 @@
         const obj = { x: 'abc', y: {m: 1} };
         // const obj = [1,2,3,4];
 
-        // const result = clone1(obj);
-        const result = clone2(obj);
+        const result = clone1(obj);
+        const result2 = clone2(obj);
 
         //修改新数据中某个引用类型的值
-        // result.y.m = 2;
-
+        result.y.m = 2;
+        //
         console.log(obj);
         console.log(result);
         console.log(obj === result);
+        console.log(result2);
+        console.log(obj === result2);
     </script>
 </body>
 </html>

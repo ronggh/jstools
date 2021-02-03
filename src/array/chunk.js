@@ -1,9 +1,12 @@
 /**
- * 数组分块儿
+ * 数组分块
+ * 将数组拆分成多个 size 长度的区块，每个区块组成小数组,整体组成一个二维数组
+ * 如: [1, 3, 5, 6, 7, 8] 调用chunk(arr, 4) ==> [[1, 3, 5, 6], [7,8]]
  * @param {Array} arr 
  * @param {Number} size 
  */
-export function chunk(arr, size=1){
+
+function chunk(arr, size=1){
     //判断
     if(arr.length === 0){
         return [];
@@ -17,7 +20,6 @@ export function chunk(arr, size=1){
         if(tmp.length === 0){
             //将 tmp 压入到 result 中
             result.push(tmp);
-            // [ [1,2,3], [4,5,6], [7] ]
         }
         //将元素压入到临时数组 tmp 中
         tmp.push(item);
@@ -28,3 +30,5 @@ export function chunk(arr, size=1){
     });
     return result;
 }
+
+export {chunk}
