@@ -27,3 +27,5 @@ function mergeObject(...objs){
     });
     return result;
 }
+
+export {mergeObject}

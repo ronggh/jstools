@@ -23,3 +23,5 @@ function debounce(callback, time){
         }, time);
     }
 }
+
+export {debounce}

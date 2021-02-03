@@ -33,3 +33,5 @@ function slice(arr, begin, end){
 
     return result;
 }
+
+export {slice}

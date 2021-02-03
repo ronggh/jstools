@@ -53,3 +53,5 @@ function unique3(arr){
     // return array;
     return [...new Set(arr)];
 }
+
+export {unique1,unique2,unique3}

@@ -25,3 +25,5 @@ function addEventListener(el, type, fn, selector){
         });
     }
 }
+
+export {addEventListener}

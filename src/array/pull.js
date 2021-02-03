@@ -33,3 +33,5 @@ function pull(arr, ...args){
 function pull2(arr, values){
     return pull(arr, ...values);
 }
+
+export {pull, pull2}

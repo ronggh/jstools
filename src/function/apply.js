@@ -19,3 +19,5 @@ function apply(Fn, obj, args){
     // 返回结果
     return result;
 }
+
+export {apply}

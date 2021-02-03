@@ -35,3 +35,5 @@ function flatten2(arr){
     //返回结果
     return result;
 }
+
+export {flatten1, flatten2}

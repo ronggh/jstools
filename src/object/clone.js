@@ -40,3 +40,5 @@ function clone1(target){
         return target;
     }
 }
+
+export {clone1,clone2}

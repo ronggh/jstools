@@ -21,3 +21,5 @@ function myInstanceOf(obj, Fn){
     }
     return false;
 }
+
+export {myInstanceOf}

@@ -128,3 +128,5 @@ function some(arr, callback) {
     //如果都满足条件则返回 true
     return false;
 }
+
+export {map,reduce, filter,find ,findIndex,every,some}

@@ -76,3 +76,5 @@ PubSub.unsubscribe = function(flag){
         }
     }
 }
+
+export {PubSub}

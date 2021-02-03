@@ -107,3 +107,5 @@ function deepClone(target, map=new Map()){
         return target;
     }
 }
+
+export {deepClone}

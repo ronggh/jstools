@@ -44,3 +44,5 @@ eventBus.off = function(eventName){
         this.callbacks = {};
     }
 }
+
+export {eventBus}

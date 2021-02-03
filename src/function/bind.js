@@ -1,4 +1,4 @@
-// import {call} from './call';
+import {call} from './call';
 
 /**
  * 会返回一个新函数。参数可以在bind()中传递，也可以在返回的新函数中传递
@@ -14,3 +14,5 @@ function bind(Fn, obj, ...args){
         return call(Fn, obj, ...args, ...args2);
     }
 }
+
+export {bind}

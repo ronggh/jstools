@@ -20,3 +20,5 @@ function throttle(callback, wait){
         }
     }
 }
+
+export {throttle}

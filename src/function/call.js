@@ -20,3 +20,5 @@ function call(Fn, obj, ...args){
     // 返回执行结果
     return result
 }
+
+export {call}

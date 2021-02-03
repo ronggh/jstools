@@ -115,3 +115,5 @@ axios.delete = function(url, options){
    
     return axios(config);
 }
+
+export {axios}

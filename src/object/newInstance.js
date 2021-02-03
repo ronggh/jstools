@@ -14,3 +14,6 @@ function newInstance(Fn, ...args) {
     //4. 返回新对象
     return result instanceof Object ? result : obj;
 }
+
+
+export {newInstance}
